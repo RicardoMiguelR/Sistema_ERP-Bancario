@@ -1,0 +1,44 @@
+# Entorno virtual
+venv/
+ENV/
+env/
+
+# Archivos del sistema
+*.DS_Store
+*.swp
+*.swo
+Thumbs.db
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configuración de editores
+.idea/
+.vscode/
+
+# Archivos de entorno (variables secretas, claves)
+.env
+
+# Archivos estáticos generados automáticamente
+staticfiles/
+media/
+
+# Archivos de logs
+*.log
+
+# Respaldo de bases de datos o dumps
+*.sql
+*.dump
+
+# Archivos de prueba, backups o temporales
+*.bak
+*.old
+*.orig
+*.tmp
+
+# Archivos de hojas de cálculo que uses solo en pruebas locales
+*.xls
+*.xlsx
+*.csv
