@@ -1,11 +1,13 @@
-{% extends 'principal.html' %} {% block content %}
+{% extends 'principal.html' %} {% block formulario_inicial %} {% load static %}
 
 <h1>Formulario de Toma de Datos</h1>
 
-<form>
+<form method="POST">
+  {% csrf_token %}
+
   <div class="mb-3">
     <label for="tipoUsuario" class="form-label">Tipo de usuario</label>
-    <select id="tipoUsuario" class="form-select">
+    <select id="tipoUsuario" name="tipo_usuario" class="form-select">
       <option value="">Seleccione</option>
       {% for tipo_usuario in tipos_usuario %}
       <option value="{{ tipo_usuario.id }}">{{ tipo_usuario.nombre }}</option>
@@ -20,4 +22,5 @@
   <button type="submit" class="btn btn-success">Enviar</button>
 </form>
 
+<script src="{% static 'usuarios/js/formularioInicial.js' %}"></script>
 {% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'principal.html' %} {% block formulario_complejo %} {% load static %}
+
+<form>
+  <h2>Selecciona tu ubicación</h2>
+  <div class="mb-3">
+    <label for="pais" class="form-label">País</label>
+    <select id="pais" class="form-select">
+      <option value="">Seleccione</option>
+      {% for pais in paises %}
+      <option value="{{ pais.id }}">{{ pais.nombre }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="estado" class="form-label">Estado</label>
+    <select id="estado" class="form-select">
+      <option value="">Seleccione un país primero</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="municipio" class="form-label">Municipio</label>
+    <select id="municipio" class="form-select">
+      <option value="">Seleccione un estado primero</option>
+    </select>
+  </div>
+</form>
+
+<script src="{% static 'usuarios/js/formularioComplejo.js' %}"></script>
+{% endblock %}

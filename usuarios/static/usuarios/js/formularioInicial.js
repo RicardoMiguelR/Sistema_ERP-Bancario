@@ -2,9 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const tipoUsuario = document.getElementById("tipoUsuario");
   const camposDinamicos = document.getElementById("camposDinamicos");
 
+  // Escuchador de cambios ->
   tipoUsuario.addEventListener("change", () => {
-    // # Escuchador de cambios
-
     const valorSelectTipoUsuario =
       tipoUsuario.options[tipoUsuario.selectedIndex].text; // # Viculamos con valores tipoUsuarios desde la BD
 
@@ -19,11 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="row">
                     <div class="col-md-6">
                         <label for="nombre" class="form-label">Nombre completo</label>
-                        <input type="text" id="nombre" class="form-control">
+                        <input type="text" name="nombre" class="form-control">
                     </div>
                     <div class="col-md-6">
                         <label for="fecha_nacimiento" class="form-label">Fecha de nacimiento</label>
-                        <input type="date" id="fecha_nacimiento" class="form-control">
+                        <input type="date" name="fecha_nacimiento" class="form-control">
                     </div>
                 </div>
             </div>
@@ -36,12 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="apartado2 mb-3">
                 <div class="row">
                     <div class="col-md-6">
-                        <label for="razon-social" class="form-label">Razon social</label>
-                        <input type="text" id="razon-social" class="form-control">
+                        <label for="razon_social" class="form-label">Razon social</label>
+                        <input type="text" name="razon_social" class="form-control">
                     </div>
                     <div class="col-md-6">
                         <label for="rfc" class="form-label">RFC</label>
-                        <input type="text" id="rfc" class="form-control">
+                        <input type="text" name="rfc" class="form-control">
                     </div>
                 </div>
             </div>
@@ -51,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
       camposDinamicos.insertAdjacentHTML(
         "beforeend",
         `
-                    <div class="alert alert-warning" role="alert">
-                        ¡Selecciona una opción válida!
-                    </div>
-                `
+            <div class="alert alert-warning" role="alert">
+                ¡Selecciona una opción válida!
+            </div>
+        `
       );
     }
   });
